@@ -6,6 +6,7 @@ import SearchInput from "../Form/SearchInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
+import cartIcon from '../../images/cart.png';
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -36,7 +37,7 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link to="/" className="navbar-brand">
+            <Link to="/" className="navbar-brand px-3">
             🛍️ VibeMart
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -122,10 +123,10 @@ const Header = () => {
                   </li>
                 </>
               )}
-              <li className="nav-item">
+              <li className="nav-item px-3">
                 <NavLink to="/cart" className="nav-link">
                   <Badge count={cart?.length} showZero offset={[10, -5]}>
-                    Cart
+                  <img src={cartIcon} alt="Cart" style={{ width: 24, height: 24 }} />
                   </Badge>
                 </NavLink>
               </li>

@@ -14,6 +14,7 @@ export default function useCategory() {
     }
   };
 
+  
   useEffect(() => {
     getCategories();
   }, []);

@@ -66,8 +66,8 @@ const CartPage = () => {
                       src={`/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
                       alt={p.name}
-                      width="100%"
-                      height={"130px"}
+                      width="80%"
+                      height={"70%"}
                     />
                   </div>
                   <div className="col-md-4">
@@ -97,7 +97,7 @@ const CartPage = () => {
                     <h4>Current Address</h4>
                     <h5>{auth?.user?.address}</h5>
                     <button
-                      className="btn btn-outline-warning"
+                      className="btn btn-info"
                       onClick={() => navigate("/dashboard/user/profile")}
                     >
                       Update Address
@@ -108,14 +108,14 @@ const CartPage = () => {
                 <div className="mb-3">
                   {auth?.token ? (
                     <button
-                      className="btn btn-outline-warning"
+                      className="btn btn-info"
                       onClick={() => navigate("/dashboard/user/profile")}
                     >
                       Update Address
                     </button>
                   ) : (
                     <button
-                      className="btn btn-outline-warning"
+                      className="btn btn-info"
                       onClick={() =>
                         navigate("/login", {
                           state: "/cart",
@@ -128,7 +128,7 @@ const CartPage = () => {
                 </div>
               )}
               <button
-                className="btn btn-outline-warning"
+                className="btn btn-info"
                 // onClick={() => navigate("/dashboard/user/profile")}
               >
                 Order Now

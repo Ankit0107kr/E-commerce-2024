@@ -1,6 +1,6 @@
 body {
     background-image: url('../src/images/bg.jpg');
-    background-size: cover;
+    background-size: stretchable;
     background-position: center;
     height: 100%;
     width: 100%; 
